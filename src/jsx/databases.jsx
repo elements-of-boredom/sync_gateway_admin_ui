@@ -22,8 +22,8 @@ module.exports = React.createClass({
   },
   createDatabase : function(e) {
     e.preventDefault();
-    var db = this.refs.dbName.state.value,
-      url =this.refs.dbServer.state.value
+    var db = this.refs.dbName.getDOMNode().value,
+      url =this.refs.dbServer.getDOMNode().value
     // console.log("createDatabase", db, url)
     syncModel.createDB(location.origin, db, {
       server : url
